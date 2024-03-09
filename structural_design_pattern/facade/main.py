@@ -32,7 +32,6 @@ class ComputerFacade:
         self.cpu.execute()
 
 
-
 if __name__ == "__main__":
     c = ComputerFacade()
     c.start()
