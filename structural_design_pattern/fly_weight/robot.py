@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 
 from sprites import Sprites
+from constants import RobotTypes
 
 
 class Robot(ABC):
@@ -23,7 +24,7 @@ class HumanoidRobot(Robot):
     """
     def __init__(self, sprites: Sprites):
         print("Taking 31 kb to create object")
-        self._type = "HUMANOID"
+        self._type = RobotTypes.HUMANOID.value
         self._body = sprites
 
     def display(self, x: int, y: int):
@@ -42,7 +43,7 @@ class AnimalRobot(Robot):
     """
     def __init__(self, sprites: Sprites):
         print("Taking 31 kb to create object")
-        self._type = "ANIMAL"
+        self._type = RobotTypes.ANIMAL.value
         self._body = sprites
 
     def display(self, x: int, y: int):
